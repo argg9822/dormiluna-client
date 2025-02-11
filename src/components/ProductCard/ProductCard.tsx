@@ -13,6 +13,10 @@ export const ProductCard: React.FC<{ product: Product }> = ({ product: { title, 
         slidesToScroll: 1,
     };
 
+    const cleanUrl = (url: string) => {
+        return url.replace(/^https?:\/\//, ""); // Remueve https:// o http://
+    }
+
     return (
         <div className="product-card">
             <div>
@@ -22,7 +26,7 @@ export const ProductCard: React.FC<{ product: Product }> = ({ product: { title, 
                     <Slider {...settings}>
                         {images.map((image, index) => (
                             <div key={index}>
-                                <img src={`https://${image.replace("https://", "")}`} alt={title} />
+                                <img src={`https://${cleanUrl(image)}`} alt={`Slide ${index}`} />
                             </div>
                         ))}
                     </Slider>
