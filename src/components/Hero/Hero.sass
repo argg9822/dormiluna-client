@@ -1,0 +1,27 @@
+.hero
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    width: 100%
+    background-color: a.$bg-secondary // Fondo suave y cálido
+    overflow: hidden
+
+    .hero-img-container
+        width: 100%
+        height: 550px
+        position: relative
+        display: flex
+        justify-content: center
+    img
+        // width: 150%
+        object-fit: cover
+        height: 100%
+        object-fit: cover
+        object-position: center center
+
+        @media (min-width: 768px)
+            width: 100%
+
+    

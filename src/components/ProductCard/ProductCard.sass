@@ -1,0 +1,70 @@
+// 🎨 Variables de colores actualizadas
+$product-bg: #E8E6E1   // Fondo de la tarjeta, tono neutro cálido
+$product-border: #B08A5D  // Borde con tono dorado suave
+$product-hover-bg: #DDD3C1  // Efecto hover con un tono más claro
+$product-shadow: rgba(0, 0, 0, 0.12)  // Sombra sutil
+$product-hover-shadow: rgba(0, 0, 0, 0.25)
+$product-price: #8B4513  // Tono marrón elegante para el precio
+$button-gradient: linear-gradient(135deg, #B08A5D, #8B5E3B) // Botón con efecto dorado
+$button-hover-gradient: linear-gradient(135deg, #8B5E3B, #6B3F1E)
+
+// 📦 Estilos de la tarjeta de producto
+.product-card
+    background: $product-bg
+    border-radius: 14px
+    border: 1px solid $product-border
+    box-shadow: 0 6px 14px $product-shadow
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 1.2rem
+    max-width: 320px
+    transition: all 0.3s ease-in-out
+
+    &:hover
+        background: $product-hover-bg
+        transform: translateY(-4px)
+        box-shadow: 0 8px 18px $product-hover-shadow
+
+    // 🖼️ Estilos de imagen
+    img
+        width: 100%
+        height: 180px
+        object-fit: contain
+        border-radius: 12px
+
+    // 🏷️ Título del producto
+    .product-title
+        font-weight: bold
+        margin: 12px 0
+        color: #3D2C2A
+
+    // 📜 Descripción
+    .product-description
+        font-size: 0.95rem
+        text-align: center
+        color: #5A4A42
+        padding: 0 12px
+
+    // 💰 Precio
+    .product-price
+        font-weight: bold
+        color: $product-price
+        margin: 10px 0
+        font-size: 1.1rem
+
+    // 🛒 Botón de compra
+    .buy-button
+        background: $button-gradient
+        color: white
+        border: none
+        padding: 12px 18px
+        border-radius: 10px
+        cursor: pointer
+        font-weight: bold
+        transition: all 0.3s ease-in-out
+
+        &:hover
+            background: $button-hover-gradient
+            transform: scale(1.05)

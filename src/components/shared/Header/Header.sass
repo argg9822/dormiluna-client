@@ -1,0 +1,45 @@
+header
+    position: fixed
+    top: 0
+    z-index: 100
+    width: 100%
+
+    .main-header
+        display: flex
+        justify-content: space-between
+        height: 8vh
+        padding: 0 20px
+        background: a.$gradient-primary
+        color: a.$color-text-light
+        text-align: center
+
+    h1
+        background-image: a.$gradient-primary-text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        letter-spacing: 1px
+
+    .logo-container
+        display: flex
+        align-items: center
+        cursor: pointer
+    a
+        color: a.$color-text
+    
+    .nav-menu
+        position: relative
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        > nav
+            display: none
+            position: absolute
+            // display: flex
+            justify-content: space-between
+            flex-direction: column
+            top: 100%
+            right: 0
+            background: a.$bg-secondary            
+            z-index: 101
+        .show
+            display: flex
