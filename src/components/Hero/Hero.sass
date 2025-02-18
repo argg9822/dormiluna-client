@@ -5,23 +5,74 @@
     align-items: center
     text-align: center
     width: 100%
-    background-color: a.$bg-secondary // Fondo suave y cálido
     overflow: hidden
 
     .hero-img-container
+        position: relative
         width: 100%
         height: 550px
-        position: relative
         display: flex
         justify-content: center
+        align-items: center
+        margin: 25px
+        overflow: hidden
+
     img
-        // width: 150%
-        object-fit: cover
+        // object-fit: cover
+        width: 100%
         height: 100%
-        object-fit: cover
-        object-position: center center
+        object-position: center
 
-        @media (min-width: 768px)
-            width: 100%
+    .overlay-img
+        position: absolute
+        top: 30px
+        right: 40px
+        width: 400px // Ajuste para pantallas grandes
 
-    
+        @media (max-width: 1024px) // Tablets y medianas
+            width: 250px
+
+        @media (max-width: 768px) // Móviles
+            width: 180px
+            top: 20px
+            right: 20px
+
+    .nav-button
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background: rgba(0, 0, 0, 0.5)
+        color: white
+        border: none
+        padding: 10px 15px
+        font-size: 24px
+        cursor: pointer
+        z-index: 10
+        transition: background 0.3s ease
+
+        &:hover
+            background: rgba(0, 0, 0, 0.8)
+
+        @media (max-width: 768px) // Móviles
+            padding: 5px 10px
+            font-size: 18px
+
+    .left
+        left: 25px
+
+        @media (max-width: 768px)
+            left: 10px
+
+    .right
+        right: 25px
+
+        @media (max-width: 768px)
+            right: 10px
+
+    @media (max-width: 1768px) // Ajustes generales para móviles
+        .hero-img-container
+            height: 350px // Reduce el tamaño del slider en móviles
+            margin: 15px
+
+        img
+            height: auto

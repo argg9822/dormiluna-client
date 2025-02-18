@@ -25,12 +25,13 @@ header
         cursor: pointer
     a
         color: a.$color-text
-    
+
     .nav-menu
         position: relative
         display: flex
         justify-content: flex-end
         align-items: center
+
         > nav
             display: none
             position: absolute
@@ -39,7 +40,13 @@ header
             flex-direction: column
             top: 100%
             right: 0
-            background: a.$bg-secondary            
+            background: a.$bg-secondary
             z-index: 101
         .show
             display: flex
+
+    .dropdown-nav
+        margin-left: 20px
+    .icon-button
+
+        margin-left: 20px
