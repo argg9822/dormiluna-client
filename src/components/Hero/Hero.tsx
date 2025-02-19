@@ -5,12 +5,10 @@ import './Hero.sass';
 
 const images = [
     "/images/Banners/banner1.jpeg",
-    "/images/Banners/banner2.jpeg",
-    "/images/Banners/banner3.jpeg",
-    "/images/Banners/banner4.jpg"
+    "/images/Banners/banner2.jpeg"
+
 
 ];
-
 
 export const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,16 +47,6 @@ export const Hero = () => {
                 <button className="nav-button left" onClick={prevSlide}>❮</button>
                 <button className="nav-button right" onClick={nextSlide}>❯</button>
 
-                {/* Imagen superpuesta en la parte superior derecha */}
-                {/* <div className="overlay-img">
-                    <Image
-                        src="/images/logo.png"
-                        alt="Overlay Image"
-                        width={250}
-                        height={100}
-                        quality={100}
-                    />
-                </div> */}
             </div>
         </section>
     );

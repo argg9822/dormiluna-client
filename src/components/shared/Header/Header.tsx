@@ -28,8 +28,6 @@ export const Header = () => {
                     </Link>
                 </div>
 
-
-
                 <div className="nav-menu">
                     {/* Usuario */}
                     <Link href="/profile" className="icon-button">
